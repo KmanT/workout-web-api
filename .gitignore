@@ -1,0 +1,4 @@
+*.exe
+config/heroku.config.json
+config/dev.config.json
+config/config.json
