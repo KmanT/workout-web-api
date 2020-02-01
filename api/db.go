@@ -1,5 +1,5 @@
 package api
 
-import "turskek-workout-app/utils"
+import "../utils"
 
 var db = utils.ConnectDB()

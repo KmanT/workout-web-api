@@ -4,8 +4,9 @@ import (
 	"fmt"
 	"log"
 	"os"
-	"turskek-workout-app/config"
-	"turskek-workout-app/model"
+
+	"../config"
+	"../model"
 
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres"

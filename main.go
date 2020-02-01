@@ -4,16 +4,22 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"turskek-workout-app/config"
-	"turskek-workout-app/routes"
+
+	// change the dot to the name of the project
+	// if it does not run
+	"./config"
+	"./routes"
 )
 
 func main() {
-	//cfg := config.InitConfig()
-	//port := cfg.Server.Port
+	// Heroku has the env variable "PORT" set
+	// while chances are you do not. Keep it
+	// this way.
 	port := os.Getenv("PORT")
 
 	if port == "" {
+		// It will create an instance of the config
+		// Then set the port correctly
 		cfg := config.InitConfig(true)
 		port = cfg.Server.Port
 	}

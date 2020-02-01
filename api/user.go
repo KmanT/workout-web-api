@@ -5,7 +5,8 @@ import (
 	"fmt"
 	"net/http"
 	"time"
-	"turskek-workout-app/model"
+
+	"../model"
 
 	jwt "github.com/dgrijalva/jwt-go"
 	"github.com/gorilla/mux"

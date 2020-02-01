@@ -2,8 +2,9 @@ package routes
 
 import (
 	"net/http"
-	"turskek-workout-app/api"
-	"turskek-workout-app/utils/auth"
+
+	"../api"
+	"../utils/auth"
 
 	"github.com/gorilla/mux"
 )
