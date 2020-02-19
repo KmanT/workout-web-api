@@ -5,7 +5,8 @@ import (
 	"fmt"
 	"net/http"
 	"time"
-	"turskek-workout-app/model"
+
+	"../model"
 
 	"github.com/gorilla/mux"
 )

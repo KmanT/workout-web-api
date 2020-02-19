@@ -21,7 +21,11 @@ func CreateUser(w http.ResponseWriter, r *http.Request) {
 	user := &model.User{}
 	json.NewDecoder(r.Body).Decode(user)
 
-	pass, err := bcrypt.GenerateFromPassword([]byte(user.Password), bcrypt.DefaultCost)
+	// This is where the password encryption happens.
+	// Once we're starting our project, we must salt the
+	// passwords from the beginning.
+	pass, err := bcrypt.GenerateFromPassword(
+		[]byte(user.Password), bcrypt.DefaultCost)
 	if err != nil {
 		fmt.Println(err)
 		err := ErrorResponse{
